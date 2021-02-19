@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+.table-head {
+  background: #b8ff91;
+}
+
+.star-rating {
+  cursor: pointer;
+}
