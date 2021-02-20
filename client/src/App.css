@@ -9,3 +9,8 @@
 .star-rating {
   cursor: pointer;
 }
+
+.price-range {
+  font-size: 0.6em;
+  font-weight: bold;
+}
