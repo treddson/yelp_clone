@@ -33,7 +33,7 @@ export default function ListRestaurants() {
   return (
     <Fragment>
       <h1 className="text-center mt-5">Restaurants</h1>
-      <table className="table mt-5">
+      <table className="table table-hover mt-5">
         <thead className="table-head">
           <tr>
             <th scope="col">Restaurant</th>

@@ -25,34 +25,32 @@ export default function InputRestaurants() {
     <Fragment>
       <h1 className="text-center mt-5">Add Restaurant</h1>
       <form className="d-flex mt-5" onSubmit={onFormSubmit}>
-        <label htmlFor="restaurant" className="m-2">
-          Restaurant
-        </label>
         <input
           type="text"
           spellCheck="true"
-          className="form-control"
+          className="form-control mx-2"
+          placeholder="Restaurant"
           value={restaurant}
           onChange={(e) => setRestaurant(e.target.value)}
         />
-        <label htmlFor="restaurant" className="m-2">
-          Location
-        </label>
         <input
           type="text"
-          className="form-control"
+          className="form-control mx-2"
+          placeholder="Location"
           value={rest_location}
           onChange={(e) => setRest_location(e.target.value)}
         />
-        <label htmlFor="restaurant" className="m-2 price-range">
-          Price Range
-        </label>
-        <input
-          type="text"
-          className="form-control"
-          value={price_range}
+        <select
+          className="custom-select mx-2"
           onChange={(e) => setPrice_range(e.target.value)}
-        />
+        >
+          <option disabled>Price Range</option>
+          <option value="1">$</option>
+          <option value="2">$$</option>
+          <option value="3">$$$</option>
+          <option value="4">$$$$</option>
+          <option value="5">$$$$$</option>
+        </select>
         <button className="btn btn-outline-success ml-2">Add</button>
       </form>
     </Fragment>

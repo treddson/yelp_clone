@@ -4,3 +4,5 @@ CREATE TABLE restaurants(
     restaurant VARCHAR(255),
     rest_location VARCHAR(255)
 );
+
+
