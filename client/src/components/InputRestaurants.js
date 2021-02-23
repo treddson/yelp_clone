@@ -44,7 +44,7 @@ export default function InputRestaurants() {
           className="custom-select mx-2"
           onChange={(e) => setPrice_range(e.target.value)}
         >
-          <option disabled>Price Range</option>
+          {/* <option disabled>Price Range</option> */}
           <option value="1">$</option>
           <option value="2">$$</option>
           <option value="3">$$$</option>
