@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Rating from "./Rating";
+import { Link } from "react-router-dom";
 
 export default function ListRestaurants() {
   const [restaurants, setRestaurants] = useState([]);
@@ -42,6 +43,7 @@ export default function ListRestaurants() {
             <th scope="col">Price Range</th>
             <th scope="col">Rating</th>
             <th scope="col">Delete</th>
+            <th scope="col">Edit</th>
           </tr>
         </thead>
         <tbody className="table-body">
@@ -61,6 +63,13 @@ export default function ListRestaurants() {
                 >
                   Delete
                 </button>
+              </td>
+              <td>
+                <Link to="/UpdateRestaurants">
+                  <button type="button" className="btn btn-outline-warning">
+                    Edit
+                  </button>
+                </Link>
               </td>
             </tr>
           ))}

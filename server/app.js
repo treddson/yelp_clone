@@ -78,6 +78,9 @@ app.delete("/input/:id", async (req, res) => {
       "DELETE FROM restaurants WHERE rest_id = $1",
       [id]
     );
+    if (!id) {
+      await pool.query("ALTER SEQUENCE todos_todo_id_seq RESTART WITH 1");
+    }
     res.json("Restaurant was deleted");
   } catch (error) {
     console.error(error.message);
