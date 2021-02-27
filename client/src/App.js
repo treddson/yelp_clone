@@ -6,26 +6,29 @@ import UpdateRestaurants from "./components/UpdateRestaurants";
 import DetailsPage from "./components/DetailsPage";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { RestaurantContextProvider } from "./context/RestaurantContext";
 
 function App() {
   return (
-    <Fragment>
-      <Navbar />
-      <div className="container-sm">
-        <Router>
-          <Switch>
-            <Route exact path="/" component={InputRestaurants} />
-            <Route
-              exact
-              path="/restaurants/:id/update"
-              component={UpdateRestaurants}
-            />
-            <Route exact path="/restaurants/:id" component={DetailsPage} />
-          </Switch>
-          <ListRestaurants />
-        </Router>
-      </div>
-    </Fragment>
+    <RestaurantContextProvider>
+      <Fragment>
+        <Navbar />
+        <div className="container-sm">
+          <Router>
+            <Switch>
+              <Route exact path="/" component={InputRestaurants} />
+              <Route
+                exact
+                path="/restaurants/:id/update"
+                component={UpdateRestaurants}
+              />
+              <Route exact path="/restaurants/:id" component={DetailsPage} />
+            </Switch>
+            <ListRestaurants />
+          </Router>
+        </div>
+      </Fragment>
+    </RestaurantContextProvider>
   );
 }
 
