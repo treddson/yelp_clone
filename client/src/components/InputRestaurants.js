@@ -3,7 +3,7 @@ import React, { useState, Fragment } from "react";
 export default function InputRestaurants() {
   const [restaurant, setRestaurant] = useState("");
   const [rest_location, setRest_location] = useState("");
-  const [price_range, setPrice_range] = useState("");
+  const [price_range, setPrice_range] = useState("Price Range");
 
   const onFormSubmit = async (e) => {
     try {
@@ -44,7 +44,7 @@ export default function InputRestaurants() {
           className="custom-select mx-2"
           onChange={(e) => setPrice_range(e.target.value)}
         >
-          {/* <option disabled>Price Range</option> */}
+          <option disabled>Price Range</option>
           <option value="1">$</option>
           <option value="2">$$</option>
           <option value="3">$$$</option>
